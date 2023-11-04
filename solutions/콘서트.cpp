@@ -23,7 +23,7 @@ int compare(seat p1, seat p2) {
 }
 
 int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
+	ios::sync_with_stdio(false), cin.tie(nullptr);
 
     cin >> N >> M;
     for (int r = 0; r < N; ++r) {
