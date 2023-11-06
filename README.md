@@ -1,7 +1,7 @@
 # 2023 2학기 컴퓨터공학부 프로그래밍 경진대회
 
 - [문제지 PDF](docs/문제지.pdf)
-- [에디토리얼 PDF](docs/에디토리얼.pdf)
+- [에디토리얼 PDF](docs/HSUPC_2023_2_editorial.pdf)
 - [정답 코드](https://github.com/HSU-CSE/hsupc-2023-2/tree/main/solutions)
 
 # 수상자
@@ -10,7 +10,6 @@
 - 3등 : 
 
 ![image](/assets/image.png)
-
 
 ---
 
