@@ -5,15 +5,23 @@ int N, M;
 vector<map<string, int>> tf;
 map<string, int> df;
 
+double tfidf(int n, int cnt) {
+    return log10((double)n / (1 + cnt));
+}
+
+int compare(const pair<string, int> &a, const pair<string, int> &b) {
+    if (a.second == b.second) return a.first < b.first;
+    else return tfidf(N, a.second) > tfidf(N, b.second);
+}
+
 void solve(int d) {
-    vector<pair<long double, string>> ans;
+    vector<pair<string, int>> ans;
     for (auto [word, cnt] : tf[d]) {
-        long double tfidf = log10((long double)N / (1 + df[word]));
-        ans.push_back({tfidf, word});
+        ans.emplace_back(word, df[word]);
     }
 
-    sort(ans.begin(), ans.end(), greater<>());
-    for (auto [tfidf, word] : ans) {
+    sort(ans.begin(), ans.end(), compare);
+    for (auto [word, cnt] : ans) {
         cout << word << ' ';
     }
     cout << '\n';
@@ -33,8 +41,8 @@ int main() {
         while (ss >> word) {
             tf[i][word]++;
         }
-        for (auto [word, count] : tf[i]) {
-            df[word]++;
+        for (auto [w, cnt] : tf[i]) {
+            df[w]++;
         }
     }
 
