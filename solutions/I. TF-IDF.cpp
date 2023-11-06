@@ -6,9 +6,9 @@ vector<map<string, int>> tf;
 map<string, int> df;
 
 void solve(int d) {
-    vector<pair<double, string>> ans;
+    vector<pair<long double, string>> ans;
     for (auto [word, cnt] : tf[d]) {
-        double tfidf = log10((double)N / (1 + df[word]));
+        long double tfidf = log10((long double)N / (1 + df[word]));
         ans.push_back({tfidf, word});
     }
 
