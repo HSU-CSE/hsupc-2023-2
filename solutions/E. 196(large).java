@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
+
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 입력 버퍼
@@ -18,10 +19,9 @@ public class Main {
             int answer = 0;
             for(int j = 0 ; j < N ; j ++){
                 long cur = Long.parseLong(st.nextToken());
-                map.put(cur, map.getOrDefault(cur, 0) + 1); // map에 입력 받은 값을 저장
-                if(map.containsKey(196 - cur)){
-                    answer += map.get(196 - cur); // 196이 될 수 있으면 answer값에 가능한 쌍 추가
-                }
+                
+                answer += map.getOrDefault(196 - cur, 0); //쌍들을 더함.
+                map.put(cur, map.getOrDefault(cur, 0)+1);// map에 입력 받은 값을 저장
             }
             sb.append(answer + "\n");
         }
