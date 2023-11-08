@@ -47,7 +47,7 @@ public class Main {
             sb.append("Case #" + (i + 1) + " : ");
             int N = Integer.parseInt(br.readLine());
             st = new StringTokenizer(br.readLine());
-            Numbers = new int[1003];
+            Numbers = new int[1300];
             int answer = 0;
             for(int j=0;j<N;j++){
                 int num = Integer.parseInt(st.nextToken());

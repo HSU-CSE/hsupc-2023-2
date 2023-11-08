@@ -11,7 +11,7 @@ int main(){
     int T;cin >> T;
     for(int Case=1;Case<=T;Case++){
         int N;cin >> N;
-        int Number[1003]{},cnt=0;
+        int Number[1300]{},cnt=0;
         while(N--){
             int num;cin >> num;
             cnt+=Number[196-num+PLUS];
