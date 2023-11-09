@@ -4,12 +4,12 @@
 - [에디토리얼 PDF](docs/HSUPC_2023_2_editorial.pdf)
 - [정답 코드](https://github.com/HSU-CSE/hsupc-2023-2/tree/main/solutions)
 
-# 수상자
-- 1등 : 
-- 2등 : 
-- 3등 : 
-
 ![image](/assets/image.png)
+
+# 수상자
+- 1등 : 추영광
+- 2등 : 이동건
+- 3등 : 강기영
 
 ---
 
