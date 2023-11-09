@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int L = Integer.parseInt(br.readLine());
-        boolean[][] visited = new boolean[L * 2][L * 2]; // 명령어의 최대 길이가 L이면, 최대 이동할 수 있는 길이 또한 L입니다. 따라서, x, y 좌표의 최대 길이는 L * 2가 됩니다.
-        int curx = L; // 배열의 길이를 L * 2로 하기 때문에, 원점은 L, L과 같습니다.
+        boolean[][] visited = new boolean[L * 2 + 1][L * 2 + 1]; // 명령어의 최대 길이가 L이면, 최대 이동할 수 있는 길이 또한 L입니다. 따라서, x, y 좌표의 최대 길이는 L * 2 + 1가 됩니다.
+        int curx = L; // 배열의 길이를 L * 2 + 1로 하기 때문에, 원점은 L, L과 같습니다.
         int cury = L;
         visited[curx][cury] = true; // 처음의 원점은 색칠이 되어 있으므로 방문 처리를 해줍니다.
         int cnt = 1; // 색칠이 된 칸의 수 => 원점이 색칠 되어 있으므로 1로 초기화 해줍니다.
